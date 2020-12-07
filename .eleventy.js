@@ -1,7 +1,20 @@
+const pluginSass = require('eleventy-plugin-sass')
+const pluginBabel = require('eleventy-plugin-babel')
+
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addWatchTarget('src/assets/')
+  eleventyConfig.addPlugin(pluginSass, {
+    watch: ['src/**/*.scss', '!node_modules/**'],
+    outputDir: '_site',
+  })
+
+  eleventyConfig.addPlugin(pluginBabel, {
+    watch: ['src/**/*.js', '!node_modules/**'],
+    outputDir: '_site',
+  })
+
+  eleventyConfig.addWatchTarget('src/assets/images/')
   eleventyConfig.addPassthroughCopy({
-    'src/assets/': 'assets/',
+    'src/assets/images/': 'assets/images/',
   })
 
   return {
@@ -13,3 +26,4 @@ module.exports = function (eleventyConfig) {
     },
   }
 }
+
