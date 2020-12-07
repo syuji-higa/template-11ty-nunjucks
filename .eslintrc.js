@@ -1,4 +1,5 @@
 module.exports = {
+  parser: 'babel-eslint',
   ignorePatterns: ['!.eslintrc.js', '!.prettierrc.js', '!.eleventy.js'],
   extends: ['eslint:recommended', 'plugin:prettier/recommended'],
   env: {

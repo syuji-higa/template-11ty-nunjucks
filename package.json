@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "npx @11ty/eleventy --formats=njk --serve",
-    "build": "npx @11ty/eleventy --formats=njk",
+    "build": "npx @11ty/eleventy --formats=njk && node tsak-pretty.js",
     "lint": "eslint --ext .js --ignore-path .gitignore .",
     "lint-staged": "lint-staged"
   },
@@ -15,6 +15,7 @@
     "*.js": "eslint --cache --fix"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^0.11.1",
     "eleventy-plugin-babel": "^1.0.1",
     "eleventy-plugin-sass": "^1.1.1",
     "eslint": "^7.14.0",
@@ -22,6 +23,7 @@
     "eslint-plugin-prettier": "^3.2.0",
     "husky": "^4.3.0",
     "lint-staged": "^10.5.3",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "pretty": "^2.0.0"
   }
 }
