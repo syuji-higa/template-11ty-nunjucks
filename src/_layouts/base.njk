@@ -9,22 +9,22 @@
 <link rel="canonical" href="{{ common.siteUrl }}/" />
 <link rel="icon" href="{{ common.baseUrl }}/favicon.ico" />
 <link rel="apple-touch-icon-precomposed" href="{{ common.baseUrl }}/apple-touch-icon-precomposed.png" />
-{% block styles %}{#
-#}<link rel="stylesheet" href="/assets/styles/common.css" />
-{% endblock %}
+{% block styles -%}
+<link rel="stylesheet" href="/assets/styles/common.css" />
+{%- endblock %}
 </head>
 <body>
 
 {% include 'header.njk' %}
 
 <main>
-{% block contents %}
-{% endblock %}
+{% block contents -%}
+{%- endblock %}
 </main>
 
-{% block scripts %}
+{% block scripts -%}
 <script src="/assets/scripts/common.js"></script>
-{% endblock %}
+{%- endblock %}
 
 </body>
 </html>

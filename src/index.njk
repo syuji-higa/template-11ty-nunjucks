@@ -5,16 +5,16 @@ description: 'Home description'
 
 {% extends "./_layouts/base.njk" %}
 
-{% block styles %}{#
-#}{{ super() }}{#
-#}<link rel="stylesheet" href="/assets/styles/home.css" />{#
-#}{% endblock %}
+{% block styles -%}
+{{ super() }}
+<link rel="stylesheet" href="/assets/styles/home.css" />
+{%- endblock %}
 
-{% block scripts %}
-{{ super() }}{#
-#}<script src="/assets/scripts/home.js"></script>{#
-#}{% endblock %}
+{% block scripts -%}
+{{ super() }}
+<script src="/assets/scripts/home.js"></script>
+{%- endblock %}
 
-{% block contents %}
+{% block contents -%}
 <p>Hi</p>
-{% endblock %}
+{%- endblock %}
